@@ -18,6 +18,9 @@ OR
 py run.py
 ```
 
+If you downloaded the release ver.
+just run ``` Lily.exe ```
+
 > [!CAUTION]
 > DO NOT LOSE YOUR key FILE
 
