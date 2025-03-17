@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD033 MD041 MD002 -->
 
 <div align="center">
-<img src='./docs/Logo.png'>
+<img src='./docs/Logo.png'/>
 <h1>Lily Encryptor</h1>
 </div>
 an easy-to-use program that lets you encrypt and decrypt files and all files in a folder using Fernet, with a GUI made using tkinter.
