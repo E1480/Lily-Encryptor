@@ -1,5 +1,6 @@
+<div align="center">
 # Lily Encryptor
-
+</div>
 an easy-to-use program that lets you encrypt and decrypt files and all files in a folder using Fernet, with a GUI made using tkinter.
 
 
@@ -27,3 +28,4 @@ py run.py
 
 ## TODO:
 - [ ] Be able to choose a different key file
+- [ ] Add more settings (Depending on feedback)
