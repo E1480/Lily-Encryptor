@@ -80,8 +80,8 @@ def init(screenWidth="400x500", screenTitle="Lily"):
 
     def key():
         log('Key bytes:')
-        log('DO NOT LOSE THIS')
         log(repr(en.__key__()), 'Success')
+        log('DO NOT LOSE THIS')
 
 
     def fileKey():
