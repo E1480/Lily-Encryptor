@@ -85,9 +85,7 @@ def init(screenWidth="400x500", screenTitle="Lily"):
 
 
     def fileKey():
-        log(str(en.__key__()))
-        newKey = filedialog.askopenfilename()
-        log(str(en.__new_key_file__(newKey)))
+        log('This feature is not implemented yet!')
 
     root = tk.Tk()
     root.title(screenTitle)
