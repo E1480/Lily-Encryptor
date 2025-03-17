@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD033 MD041 MD002 -->
+
 <div align="center">
 ![lily logo](docs/Logo.png)
 <h1>Lily Encryptor</h1>
