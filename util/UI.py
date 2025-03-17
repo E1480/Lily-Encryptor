@@ -1,6 +1,6 @@
 import tkinter as tk
 from . import Encrypter as en
-from tkinter import Text, Menu, filedialog
+from tkinter import Text, Menu, filedialog, Label
 from typing import Literal
 import asyncio
 from os import listdir
@@ -114,5 +114,8 @@ def init(screenWidth="400x500", screenTitle="Lily"):
     log_text.pack()
     log('Log:')
 
+    Label(text='Made By: E1480').pack()
+    Label(text='For unknown reasons').pack()
+    
 
     root.mainloop()
