@@ -1,6 +1,6 @@
 import tkinter as tk
 from . import Encrypter as en
-from tkinter import Text, Menu, filedialog, Button
+from tkinter import Text, Menu, filedialog
 from typing import Literal
 import asyncio
 from os import listdir
@@ -114,7 +114,7 @@ def init(screenWidth="400x500", screenTitle="Lily"):
 
     log_text = Text(root, state='disabled')
     log_text.pack()
-
+    log('Log:')
 
 
     root.mainloop()
