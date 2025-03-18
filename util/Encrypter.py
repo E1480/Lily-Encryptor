@@ -1,8 +1,10 @@
 import os
 import asyncio
+from . import _configPath 
 from cryptography.fernet import Fernet
 from os import listdir
 from os.path import isfile
+
 
 __home__ = os.path.abspath(os.path.dirname( __file__ )) + '\\'
 

@@ -1,4 +1,5 @@
 import tkinter as tk
+from . import _configPath 
 from . import Encrypter as en
 from tkinter import Text, Menu, filedialog, Label
 from typing import Literal
@@ -8,7 +9,7 @@ from os.path import isfile
 
 def init(screenWidth="400x500", screenTitle="Lily"):
 
-    def log(value:str, type:Literal['Normal','Success','Error'] = 'Normal'):
+    def log(value:str, type:Literal['Normal','Success','Error', 'Warn'] = 'Normal'):
         if type == 'Normal':
             log_text.config(state=tk.NORMAL)
             log_text.insert(tk.END, value + '\n')
@@ -16,13 +17,20 @@ def init(screenWidth="400x500", screenTitle="Lily"):
         if type == 'Success':
             log_text.config(state=tk.NORMAL)
             log_text.insert(tk.END, value + '\n', 'green')
-            log_text.tag_config("green", foreground="green")
+            log_text.tag_config("green", foreground="white", background="green")
             log_text.config(state=tk.DISABLED)
         if type == 'Error':
             log_text.config(state=tk.NORMAL)
             log_text.insert(tk.END, value + '\n', 'red')
             log_text.tag_config("red", foreground="red")
             log_text.config(state=tk.DISABLED)
+        if type == 'Warn':
+            log_text.config(state=tk.NORMAL)
+            log_text.insert(tk.END, value + '\n', 'white')
+            log_text.tag_config("white", foreground="white", background="red", )
+            log_text.config(state=tk.DISABLED)
+
+
         log_text.see(tk.END)
 
 
@@ -81,16 +89,19 @@ def init(screenWidth="400x500", screenTitle="Lily"):
     def key():
         log('Key bytes:')
         log(repr(en.__key__()), 'Success')
-        log('DO NOT LOSE THIS')
+        log('DO NOT LOSE THIS', 'Warn')
 
 
     def fileKey():
         keyFile = filedialog.askdirectory()
-        log(keyFile)
+        log('Opening key directory...')
         try:
-            en.__change_key__(keyFile)
+            en.__change_key__(keyFile+'\\')
+            log('Changed key Success!', 'Success\n')
+            _configPath.update(keyFile)
+            key()
         except Exception as e:
-            log(f'Failed to open key file: {e}')
+            log(f'Failed to open key folder: {e}')
 
 
 
@@ -119,7 +130,7 @@ def init(screenWidth="400x500", screenTitle="Lily"):
 
     log_text = Text(root, state='disabled')
     log_text.pack()
-    log('Log:')
+    log('Log:\n')
 
     Label(text='Made By: E1480').pack()
     Label(text='For unknown reasons').pack()
