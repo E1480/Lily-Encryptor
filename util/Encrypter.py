@@ -6,7 +6,7 @@ from os import listdir
 from os.path import isfile
 
 
-__home__ = os.path.abspath(os.path.dirname( __file__ )) + '\\'
+__home__ = _configPath.get()
 
 key = None
 fern = None
@@ -15,10 +15,10 @@ def init():
     global key
     global fern
     try:
-        with open(__home__+'key', 'x'):
+        with open(__home__, 'x'):
             __generateKey__()
     except:
-        with open(__home__+'key', 'rb') as key:
+        with open(__home__, 'rb') as key:
             key = key.read()
             fern = Fernet(key)
 
@@ -65,7 +65,7 @@ async def folderEncrypt(folder:str):
 
 def __key__():
     try:
-        with open(__home__+'key', 'rb') as file:
+        with open(__home__, 'rb') as file:
             return file.read()
     except:
         return "Error"

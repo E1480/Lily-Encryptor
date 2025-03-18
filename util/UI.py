@@ -26,8 +26,8 @@ def init(screenWidth="400x500", screenTitle="Lily"):
             log_text.config(state=tk.DISABLED)
         if type == 'Warn':
             log_text.config(state=tk.NORMAL)
-            log_text.insert(tk.END, value + '\n', 'white')
-            log_text.tag_config("white", foreground="white", background="red", )
+            log_text.insert(tk.END, value + '\n', 'black')
+            log_text.tag_config("black", foreground="black", background="orange", )
             log_text.config(state=tk.DISABLED)
 
 
@@ -96,9 +96,9 @@ def init(screenWidth="400x500", screenTitle="Lily"):
         keyFile = filedialog.askdirectory()
         log('Opening key directory...')
         try:
-            en.__change_key__(keyFile+'\\')
+            en.__change_key__(keyFile+'/key')
             log('Changed key Success!', 'Success\n')
-            _configPath.update(keyFile)
+            _configPath.update(keyFile+'/key')
             key()
         except Exception as e:
             log(f'Failed to open key folder: {e}')
@@ -115,7 +115,7 @@ def init(screenWidth="400x500", screenTitle="Lily"):
     file_menu = Menu(menu_bar, tearoff=0)
     menu_bar.add_cascade(label='File', menu=file_menu)
     file_menu.add_command(label='Key', command=key)
-    file_menu.add_command(label='Key file', command=fileKey)
+    file_menu.add_command(label='Key Folder', command=fileKey)
 
     encrypt_menu = Menu(menu_bar, tearoff=0)
     menu_bar.add_cascade(label='Encrypt', menu=encrypt_menu)

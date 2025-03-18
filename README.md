@@ -30,5 +30,5 @@ py run.py
 
 
 ## TODO:
-- [ ] Be able to choose a different key file
+- [x] Be able to choose a different key file
 - [ ] Add more settings (Depending on feedback)

@@ -5,11 +5,11 @@
 
 import os
 
-__home__ = os.path.abspath(os.path.dirname( __file__ )) + '\\paths.txt'
+__home__ = os.path.abspath(os.path.dirname( __file__ )) + '/paths.txt'
 
 def update(newPath:str):
     try:
-        with open(__home__, 'rw') as file:
+        with open(__home__, 'w') as file:
             file.write(newPath)
 
     except:
