@@ -85,7 +85,14 @@ def init(screenWidth="400x500", screenTitle="Lily"):
 
 
     def fileKey():
-        log('This feature is not implemented yet!')
+        keyFile = filedialog.askdirectory()
+        log(keyFile)
+        try:
+            en.__change_key__(keyFile)
+        except Exception as e:
+            log(f'Failed to open key file: {e}')
+
+
 
     root = tk.Tk()
     root.title(screenTitle)

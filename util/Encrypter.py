@@ -80,3 +80,10 @@ def __generateKey__():
     except:
         pass
 
+def __change_key__(newKeyLocation:str):
+    global __home__
+    __home__ = newKeyLocation
+    init()
+
+def __update__():
+    pass
