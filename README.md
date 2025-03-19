@@ -31,10 +31,7 @@ just run ``` Lily.exe ```
 
 
 ## TODO:
-<<<<<<< HEAD
 - [x] Be able to choose a different key file
 - [ ] Add more settings (Depending on feedback)
-=======
-- [ ] Be able to choose a different key file
-- [ ] Add more settings (Depending on feedback)
->>>>>>> 4fa85b55c009e2b84b0cd69833d26b09b4ca1a18
+
+
