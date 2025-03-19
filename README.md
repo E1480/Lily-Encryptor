@@ -16,6 +16,9 @@ OR
 py run.py
 ```
 
+If you downloaded the release ver.
+just run ``` Lily.exe ```
+
 > [!CAUTION]
 > DO NOT LOSE YOUR key FILE
 
@@ -28,5 +31,10 @@ py run.py
 
 
 ## TODO:
+<<<<<<< HEAD
 - [x] Be able to choose a different key file
 - [ ] Add more settings (Depending on feedback)
+=======
+- [ ] Be able to choose a different key file
+- [ ] Add more settings (Depending on feedback)
+>>>>>>> 4fa85b55c009e2b84b0cd69833d26b09b4ca1a18
