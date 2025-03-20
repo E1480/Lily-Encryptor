@@ -15,13 +15,15 @@ def init():
     global key
     global fern
     try:
-        with open(__home__, 'x'):
-            __generateKey__()
-    except:
-        with open(__home__, 'rb') as key:
-            key = key.read()
-            fern = Fernet(key)
-
+        try:
+            with open(__home__, 'x'):
+                __generateKey__()
+        except:
+            with open(__home__, 'rb') as key:
+                key = key.read()
+                fern = Fernet(key)
+    except Exception as e:
+        pass
     
 async def encrypt(file:str):
     try:
@@ -33,8 +35,10 @@ async def encrypt(file:str):
         original = file
         os.rename(original, original+'.muguet')
 
-    except:
-        pass
+    except Exception as e:
+        print(f'Error {e}')
+        exit()
+        
 
 
 async def decrypt(file:str):
@@ -47,8 +51,9 @@ async def decrypt(file:str):
         original = file
         os.rename(original, original.replace('.muguet', ''))
 
-    except:
-        pass
+    except Exception as e:
+        print(f'Error {e}')
+        exit()
 
 
 async def folderEncrypt(folder:str):
@@ -60,8 +65,9 @@ async def folderEncrypt(folder:str):
                 print(file)
 
 
-    except:
-        pass
+    except Exception as e:
+        print(f'Error {e}')
+        exit()
 
 def __key__():
     try:
@@ -79,13 +85,12 @@ def __generateKey__():
             key = Fernet.generate_key()
             fern = Fernet(key)
             keyFile.write(key)
-    except:
-        pass
+
+    except Exception as e:
+        print(f'Error {e}')
+        exit()
 
 def __change_key__(newKeyLocation:str):
     global __home__
     __home__ = newKeyLocation
     init()
-
-def __update__():
-    pass

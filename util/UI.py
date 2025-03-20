@@ -43,7 +43,7 @@ def init(screenWidth="400x500", screenTitle="Lily"):
                 asyncio.run(en.encrypt(file))
                 log('Success!!!', 'Success')
             except:
-                log('Encryption Error.', 'Error')
+                log('Encryption Error: No Key.', 'Error')
         else:
             log("No file chosen.")
 
@@ -55,7 +55,7 @@ def init(screenWidth="400x500", screenTitle="Lily"):
                 asyncio.run(en.decrypt(file))
                 log('Success!!!', 'Success')
             except:
-                log('Decryption Error.', 'Error')
+                log('Decryption Error: No Key.', 'Error')
         else:
             log('No file chosen.')
 
@@ -71,7 +71,7 @@ def init(screenWidth="400x500", screenTitle="Lily"):
             log('Encryption Sucess!!', 'Success')
 
         except:
-            pass
+            log('Encryption Error: No Key.', 'Error')
 
     def folderDecrypt():
         folder = filedialog.askdirectory()
@@ -83,7 +83,7 @@ def init(screenWidth="400x500", screenTitle="Lily"):
                     asyncio.run(en.decrypt(fullFile))
             log('Decryption Sucess!!', 'Success')
         except:
-            pass
+            log('Decryption Error: No Key.', 'Error')
 
 
     def key():
