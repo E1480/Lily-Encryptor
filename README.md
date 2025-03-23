@@ -38,7 +38,7 @@ just run ``` Lily.exe ```
 > the key file is stored in ./util/key
 
 
-### checkout **Lily Password** *(I need a better name.)*: **[Lily password](LilyPassword/README.md)**
+### checkout **Lily Password** *(I need a better name.)*: **[Lily password](LilyPassword/)**
 
 ## TODO:
 - [x] Be able to choose a different key file
