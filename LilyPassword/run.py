@@ -3,8 +3,8 @@
 # This software is released under the MIT License.
 # https://opensource.org/licenses/MIT
 
-from util import generate
+import util
 
 
 if __name__ == "__main__":
-    generate.init()
+    util.generate.init()

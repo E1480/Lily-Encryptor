@@ -1,6 +1,26 @@
+"""
+Encrypter Module
+================
+This module provides functionality for encrypting and decrypting files and folders using the Fernet symmetric encryption.
+Functions:
+----------
+- init(): Initializes the encryption key and Fernet object.
+- encrypt(file: str): Encrypts a given file asynchronously.
+- decrypt(file: str): Decrypts a given file asynchronously.
+- folderEncrypt(folder: str): Encrypts all files in a given folder asynchronously.
+- __key__(): Returns the encryption key.
+- __generateKey__(): Generates a new encryption key and saves it to a file.
+- __change_key__(newKeyLocation: str): Changes the location of the key file and reinitializes the encryption setup.
+Attributes:
+-----------
+- __home__: The path to the key file.
+- key: The encryption key.
+- fern: The Fernet object used for encryption and decryption.
+Who needs docs?
+"""
+
 import os
-import asyncio
-from . import _configPath 
+from . import _configPath
 from cryptography.fernet import Fernet
 from os import listdir
 from os.path import isfile
@@ -24,21 +44,21 @@ def init():
                 fern = Fernet(key)
     except Exception as e:
         pass
-    
+
 async def encrypt(file:str):
     try:
         with open(file, 'rb') as enFile:
             encrypted = fern.encrypt(enFile.read())
             with open(file, 'wb') as encrypt:
                 encrypt.write(encrypted)
-        
+
         original = file
         os.rename(original, original+'.muguet')
 
     except Exception as e:
         print(f'Error {e}')
         exit()
-        
+
 
 
 async def decrypt(file:str):

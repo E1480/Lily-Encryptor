@@ -1,3 +1,21 @@
+"""
+generate.py
+This module provides functionality to generate a Python script for decrypting files encrypted with a password and optionally a key. 
+The generated script uses the tkinter library to create a GUI for password input and decryption.
+Classes:
+    None
+Functions:
+    init(screenWidth="500x100", screenTitle="Lily")
+        Initializes the main GUI for generating the decryption script.
+    openFile()
+        Opens a file dialog to select a key file and reads its content.
+    Gen()
+        Generates the decryption script based on the provided password and optional key.
+        Creates the necessary directory structure for the generated script.
+Constants:
+    template (str): Template for the decryption script without a key.
+    templateWKey (str): Template for the decryption script with a key.
+"""
 # Copyright (c) 2025 E1480
 # 
 # This software is released under the MIT License.
