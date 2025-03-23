@@ -10,11 +10,11 @@
 <img src='./docs/Logo.png'/>
 <h1>Lily Encryptor</h1>
 </div>
-<center>
+<div align="center">
 <b>an easy-to-use program that lets you encrypt and decrypt files and all files in a folder using Fernet, with a GUI made using tkinter.</b>
 <br>
 <img src="docs/LilyEncrypt/LilyEncrypt.png" style="width: 30%; height: auto;"/>
-</center>
+</div>
 
 # How to run:
 
