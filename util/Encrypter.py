@@ -18,7 +18,6 @@ Attributes:
 - fern: The Fernet object used for encryption and decryption.
 Who needs docs?
 """
-
 import os
 from . import _configPath
 from cryptography.fernet import Fernet

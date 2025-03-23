@@ -4,3 +4,4 @@
 cffi==1.17.1
 cryptography==44.0.2
 pycparser==2.22
+pyparsing==3.2.1
