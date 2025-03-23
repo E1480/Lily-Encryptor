@@ -14,5 +14,7 @@ Lily password lets you generate a file where you can enter a password to decrypt
 ## there are 2 ways to use it:
 1. Don't specify a key file:
    -  For this you need to put the key file in the same folder as the app.
+   - <img src="../docs/LilyPassword/withkeyFile.png"/>
 2. Specify a key file:
    - For this you can just put the app where all your encrypted files.
+   - <img src="../docs/LilyPassword/wihtout.png"/>
