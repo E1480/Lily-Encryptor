@@ -34,10 +34,6 @@ just run ``` Lily.exe ```
 > [!CAUTION]
 > DO NOT LOSE YOUR key FILE
 
-
-> [!NOTE]
-> You can't use a different key file for now
-
 > [!NOTE]
 > the key file is stored in ./util/key
 
